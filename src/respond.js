@@ -295,6 +295,9 @@
 					// we prevent "Stack overflow" error in IE7
 					w.setTimeout(function(){ makeRequests(); },0);
 				} );
+			}else{
+				var event = new Event("respondFinished");
+				document.dispatchEvent( event );
 			}
 		},
 
